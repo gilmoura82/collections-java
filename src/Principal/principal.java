@@ -1,12 +1,16 @@
 package Principal;
 
+import OperacoesBasicas.ListaTarefa;
+import Ordenacao.CadastroProdutos;
 import Ordenacao.OrdenacaoPessoas;
+import Pesquisa.AgendaContatos;
+import Pesquisa.CatalogoLivros;
 import Set.ConjuntoConvidados;
 
 public class principal {
 
 	public static void main(String[] args) {
-		/*
+		
 		// Testando Tarefas
 		
 		ListaTarefa listaTarefa = new ListaTarefa();
@@ -46,7 +50,7 @@ public class principal {
 		
 		System.out.println(op.ordenarPorIdade());
 		System.out.println(op.ordenarPorAltura());
-		*/
+		
 		
 		// Testando Set
 		
@@ -64,6 +68,37 @@ public class principal {
 		
 		System.out.println("Existem " + cc.contarConvidados() + 
 				" convidados dentro do Set de Convidados");
+		
+		
+		// Testando contatos
+		
+		AgendaContatos ac = new AgendaContatos();
+				
+		ac.adicionaContato("Gil", 123456);
+		ac.adicionaContato("Gil", 99563);
+		ac.adicionaContato("Gil Moura", 111111);
+		ac.adicionaContato("José_Silva", 123456);
+		
+		System.out.println(ac.pesquisarPorNome("Gil"));
+		
+		ac.exibirContatos();
+		
+		
+		
+		// Testando ordenação
+		
+		CadastroProdutos cp = new CadastroProdutos();
+		
+		cp.adicionaProdutos("Produto 1", 1, 15d, 5);
+		cp.adicionaProdutos("Produto 2", 2, 10d, 5);
+		cp.adicionaProdutos("Produto 3", 3, 8d, 5);
+		cp.adicionaProdutos("Produto 4", 4, 7d, 5);
+		
+		System.out.println(cp.produtoSet);
+		
+		System.out.println(cp.exibirProdutosPorNome());
+		System.out.println(cp.exibirProdutosPorPreco());
+		
 		
 		
 		
