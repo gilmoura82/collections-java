@@ -1,6 +1,7 @@
 package Principal;
 
 import Ordenacao.OrdenacaoPessoas;
+import Set.ConjuntoConvidados;
 
 public class principal {
 
@@ -34,7 +35,7 @@ public class principal {
 		System.out.println(catalogoLivros.pesquisarPorAutor("Autor 1"));
 		System.out.println(catalogoLivros.pesquisarLivroPorTitulo("Livro 3"));
 		System.out.println(catalogoLivros.pesquisarPorIntervaloAno(2019, 2022));
-		*/
+		
 		
 		OrdenacaoPessoas op = new OrdenacaoPessoas();
 		
@@ -45,6 +46,26 @@ public class principal {
 		
 		System.out.println(op.ordenarPorIdade());
 		System.out.println(op.ordenarPorAltura());
+		*/
+		
+		// Testando Set
+		
+		ConjuntoConvidados cc = new ConjuntoConvidados();
+		
+		System.out.println("Existem " + cc.contarConvidados() + 
+				" convidados dentro do Set de Convidados");
+		
+		cc.adicionaConvidado("Convidado 1", 1559);
+		cc.adicionaConvidado("Convidado 2", 1559);
+		cc.adicionaConvidado("Convidado 3", 5588);
+		
+		cc.removerConvidadoPorCodigoConvite(5588);
+		cc.exibirConvidados();
+		
+		System.out.println("Existem " + cc.contarConvidados() + 
+				" convidados dentro do Set de Convidados");
+		
+		
 		
 	}
 
