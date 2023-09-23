@@ -1,7 +1,5 @@
 package Ordenacao;
 
-import java.util.Comparator;
-
 public class Pessoas implements Comparable<Pessoas> {
 	
 	// Atributos

@@ -1,10 +1,12 @@
 package Principal;
 
+import OperacoesBasicas.AgendaContatosMap;
 import OperacoesBasicas.ListaTarefa;
 import Ordenacao.CadastroProdutos;
 import Ordenacao.OrdenacaoPessoas;
 import Pesquisa.AgendaContatos;
 import Pesquisa.CatalogoLivros;
+import Pesquisa.EstoqueProdutos;
 import Set.ConjuntoConvidados;
 
 public class principal {
@@ -83,7 +85,15 @@ public class principal {
 		
 		ac.exibirContatos();
 		
+		// Testando agenda de contatos Map 
+		AgendaContatosMap acm = new AgendaContatosMap();
 		
+		acm.adicionaContatosMap("Gil", 44455);
+		acm.adicionaContatosMap("Gil Moura", 11455);
+		acm.adicionaContatosMap("Gil", 11111);
+		acm.adicionaContatosMap("Moura Gil", 44455);
+		
+		acm.exibirContatos();
 		
 		// Testando ordenação
 		
@@ -99,9 +109,14 @@ public class principal {
 		System.out.println(cp.exibirProdutosPorNome());
 		System.out.println(cp.exibirProdutosPorPreco());
 		
+		EstoqueProdutos estoque = new EstoqueProdutos();
 		
+		estoque.adicionaProdutosMap(1L, "Produto 1", 10, 5.0);
+		estoque.adicionaProdutosMap(2L, "Produto 2", 5, 30.0);
+		estoque.adicionaProdutosMap(4L, "Produto 4", 5, 20.0);
 		
-		
+		System.out.println("Valor total do estoque: R$ " + estoque.calculaValorTotalEstoque());
+		System.out.println("Produto mais caro: " + estoque.retornaProdutoMaisCaro());
 	}
 
 }
