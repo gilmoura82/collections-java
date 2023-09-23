@@ -1,6 +1,7 @@
 package Principal;
 
 import OperacoesBasicas.AgendaContatosMap;
+import OperacoesBasicas.CarrinhoDeCompras;
 import OperacoesBasicas.ListaTarefa;
 import Ordenacao.CadastroProdutos;
 import Ordenacao.OrdenacaoPessoas;
@@ -13,6 +14,7 @@ public class principal {
 
 	public static void main(String[] args) {
 		
+		/*
 		// Testando Tarefas
 		
 		ListaTarefa listaTarefa = new ListaTarefa();
@@ -117,6 +119,22 @@ public class principal {
 		
 		System.out.println("Valor total do estoque: R$ " + estoque.calculaValorTotalEstoque());
 		System.out.println("Produto mais caro: " + estoque.retornaProdutoMaisCaro());
+		
+		
+		
+		CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
+				
+		carrinho.adicionarItem("Item 1", 50.0, 5);
+		carrinho.adicionarItem("Item 2", 75.0, 15);
+		carrinho.adicionarItem("Item 3", 25.0, 10);
+		
+		carrinho.removerItem("Item 2");
+		
+		carrinho.exibirItens();
+		
+		System.out.println("Valor total em estoque: R$ " + carrinho.calcularValorTotal());
+		
+		*/
 	}
 
 }
